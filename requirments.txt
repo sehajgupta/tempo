@@ -1,0 +1,6 @@
+Flask
+joblib
+parse
+pandas
+requests
+beautifulsoup4
