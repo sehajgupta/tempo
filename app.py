@@ -19,6 +19,9 @@ def predict_salary(board_name, posting_id):
     url = f"{base_url}/{board_name}/{posting_id}"
     parsed_posting = parse.extract_job_details(parse.get_html_content(url))
 
+    if parsed_posting == None:
+        return jsonify({"error": "Could not parse posting"}), 400
+
     df = {
         "Id": random.randint(1, 100000),
         "Title": parsed_posting["title"],
