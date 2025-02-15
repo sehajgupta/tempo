@@ -7,7 +7,7 @@ import random
 
 app = Flask(__name__)
 
-model = joblib.load("./model_training/model.pk1")
+model = joblib.load("./model.pk1")
 base_url = "https://jobs.ashbyhq.com"
 
 logging.basicConfig(level=logging.DEBUG)
